@@ -2,6 +2,12 @@
 
 ## create a data frame of your installed packages
 
+library(tidyverse)
+ipt <- installed.packages() %>%
+  as_tibble() %>%
+  select(Package,LibPath,Version,Priority,Built)
+
+
 ## keep the variables
 ##   * Package
 ##   * LibPath
